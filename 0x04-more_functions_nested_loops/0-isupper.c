@@ -10,15 +10,17 @@
 
 int _isupper(int c)
 {
-	int i = 'A';
+	char uppercase = 'A';
+	int i = 0;
 
-	for (i = 'A'; i <= 'Z'; i++;)
+	for (; uppercase <= 'Z'; uppercase++)
 	{
 		/* refer int c*/
-		if (c == i)
+		if (c == uppercase)
 		{
-			return (1);
+			i = 1;
+			break;
 		}
 	}
-	return (0);
+	return (i);
 }
